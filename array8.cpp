@@ -5,19 +5,16 @@
 using namespace std;
 int calcolamax(int arrayInteri[], int arrayInterilen)
 { // trova il numero più grande dell'array
-    int max;
-    int calcolamax = 0;
+    int max = 0;
+    int calcolamax;
     // guarda tra tutti gli elementi dell' arrayInteri
-    for (int i = 0; i < arrayInterilen; i++)
+    for (int i = 1; i < arrayInterilen; i++)
     {
-        cout << "";
-        i++;
-
         // se numero preso è maggiore del precedente
-        if (arrayInteri[i] > calcolamax)
+        if (arrayInteri[i] > arrayInteri[ max ])
         {
             // assegna il nuovo massimo
-            arrayInteri[i] = max;
+             max = i;
         }
     }
     return max;
@@ -31,4 +28,5 @@ int main()
     // dichiaro max,apro la funzione che richiamo fuori dal main
     int max = calcolamax(arrayInteri, arrayInterilen);
     cout << "stampa il numero piu alto  " << max << endl;
+    return 0;
 }
